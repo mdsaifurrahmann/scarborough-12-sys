@@ -1,0 +1,43 @@
+[
+	{
+		"name": "Dashboard",
+		"icon": "home-outline",
+		"url": "dashboard",
+		"slug": "dashboard"
+	},
+	{
+		"name": "Website Information",
+		"icon": "information-circle-outline",
+		"url": "info-settings",
+		"slug": "info.index"
+	},
+	{
+		"name": "Users",
+		"icon": "people-outline",
+		"url": "users",
+		"slug": "users.index"
+	},
+	{
+		"name": "Role & Permissions",
+		"icon": "shield-half-outline",
+		"url": "",
+		"slug": "roles",
+		"submenu": [
+			{
+				"name": "Groups",
+				"url": "groups",
+				"slug": "groups.index"
+			},
+			{
+				"name": "Permissions",
+				"url": "permissions",
+				"slug": "permissions.index"
+			},
+			{
+				"name": "Roles",
+				"url": "roles",
+				"slug": "roles.index"
+			}
+		]
+	}
+]
