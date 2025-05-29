@@ -2,11 +2,6 @@
 
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\PolicyController;
-use App\Http\Controllers\ProductColorController;
-use App\Http\Controllers\ProductsCategoryController;
-use App\Http\Controllers\ProductsController;
-use App\Http\Controllers\ProductSizeController;
-use App\Http\Controllers\ProductSizeGuideController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\WebsiteInformationController;
@@ -38,11 +33,12 @@ Route::prefix('panel')->middleware('auth')->group(function () {
         Route::patch('tos/update', [PolicyController::class, 'tosUpdate'])->name('tos.update');
 
 // Website Information
-        Route::get('info-settings', [WebsiteInformationController::class, 'index'])->name('info.index');
-        Route::put('basic-info/update', [WebsiteInformationController::class, 'basicInfo'])->name('basic.info.update');
-        Route::put('social-media/update', [WebsiteInformationController::class, 'socialMedia'])->name('social.media.update');
-        Route::put('seo-info/update', [WebsiteInformationController::class, 'seo'])->name('seo.info.update');
-        Route::put('code-injector/update', [WebsiteInformationController::class, 'injector'])->name('injector.update');
+        Route::get('website-information', [WebsiteInformationController::class, 'index'])->name('info.index');
+
+        Route::put('website-information/update', [WebsiteInformationController::class, 'update'])->name('info.update');
+        // Route::put('social-media/update', [WebsiteInformationController::class, 'socialMedia'])->name('social.media.update');
+        // Route::put('seo-info/update', [WebsiteInformationController::class, 'seo'])->name('seo.info.update');
+        // Route::put('code-injector/update', [WebsiteInformationController::class, 'injector'])->name('injector.update');
     });
 
 

@@ -13,7 +13,7 @@ class FileUpload
         if ($request->hasFile($key)) {
             $file = $request->file($key);
             $file_name = time() . Str::random(16) . '.' . Str::replace(' ', '-', $file->getClientOriginalExtension());
-            Storage::disk('public')->putFileAs($path, $file, $file_name);
+            Storage::disk('primary_public')->putFileAs($path, $file, $file_name);
 
             return $file_name;
         }
@@ -31,7 +31,7 @@ class FileUpload
 
                 $fileNames[] = $file_name;
 
-                Storage::disk('public')->putFileAs($directory, $value, $file_name);
+                Storage::disk('primary_public')->putFileAs($directory, $value, $file_name);
             }
             return $fileNames;
         }
@@ -44,13 +44,13 @@ class FileUpload
         $request = request();
         if ($request->hasFile($key)) {
 
-            if ($model->$attribute && Storage::disk('public')->exists($path . '/' . $model->$attribute)) {
-                Storage::disk('public')->delete($path . '/' . $model->$attribute);
+            if ($model->$attribute && Storage::disk('primary_public')->exists($path . '/' . $model->$attribute)) {
+                Storage::disk('primary_public')->delete($path . '/' . $model->$attribute);
             }
 
             $file = $request->file($key);
             $file_name = time() . Str::random(16) . '.' . Str::replace(' ', '-', $file->getClientOriginalExtension());
-            Storage::disk('public')->putFileAs($path, $file, $file_name);
+            Storage::disk('primary_public')->putFileAs($path, $file, $file_name);
 
             return $file_name;
         }
@@ -60,8 +60,8 @@ class FileUpload
 
     public static function delete($model, $attribute, $path): null|true
     {
-        if ($model->$attribute && Storage::disk('public')->exists($path . '/' . $model->$attribute)) {
-            Storage::disk('public')->delete($path . '/' . $model->$attribute);
+        if ($model->$attribute && Storage::disk('primary_public')->exists($path . '/' . $model->$attribute)) {
+            Storage::disk('primary_public')->delete($path . '/' . $model->$attribute);
 
             return true;
         }

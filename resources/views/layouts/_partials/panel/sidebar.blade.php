@@ -6,8 +6,7 @@
 <aside class="sidebar-wrapper" data-simplebar="true">
     <div class="sidebar-header">
         <div>
-            {{-- <img src="{{ asset('assets/images/logo-icon-2.png') }}" class="logo-icon" alt="logo icon"> --}}
-            <ion-icon name="happy-outline" size="large"></ion-icon>
+            <img src="{{ asset('assets/images/prodigy.svg') }}" class="logo-icon" alt="logo icon">
         </div>
         <div>
             <h4 class="logo-text">PRODIGY</h4>

@@ -8,7 +8,7 @@
 	{
 		"name": "Website Information",
 		"icon": "information-circle-outline",
-		"url": "info-settings",
+		"url": "website-information",
 		"slug": "info.index"
 	},
 	{
