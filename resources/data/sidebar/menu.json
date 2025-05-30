@@ -18,6 +18,12 @@
 		"slug": "contact.index"
 	},
 	{
+		"name": "Event Details",
+		"icon": "bonfire-outline",
+		"url": "event-details",
+		"slug": "event.index"
+	},
+	{
 		"name": "Users",
 		"icon": "people-outline",
 		"url": "users",

@@ -6,6 +6,7 @@ use App\Http\Controllers\RolesController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\WebsiteInformationController;
 use App\Http\Controllers\ContactInformationController;
+use App\Http\Controllers\EventDetailsController;
 
 Route::prefix('panel')->middleware('auth')->group(function () {
     Route::get('dashboard', [Dashboard::class, 'index'])->name('dashboard');
@@ -40,6 +41,10 @@ Route::prefix('panel')->middleware('auth')->group(function () {
         // Contact Information
         Route::get('contact-information', [ContactInformationController::class, 'index'])->name('contact.index');
         Route::put('contact-information/update', [ContactInformationController::class, 'update'])->name('contact.update');
+
+        // Event Details
+        Route::get('event-details', [EventDetailsController::class, 'index'])->name('event.index');
+        Route::put('event-details/update', [EventDetailsController::class, 'update'])->name('event.update');
     });
 
 
