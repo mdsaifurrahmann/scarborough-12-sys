@@ -12,6 +12,12 @@
 		"slug": "info.index"
 	},
 	{
+		"name": "Contact Information",
+		"icon": "mail-open-outline",
+		"url": "contact-information",
+		"slug": "contact.index"
+	},
+	{
 		"name": "Users",
 		"icon": "people-outline",
 		"url": "users",

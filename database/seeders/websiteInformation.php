@@ -30,14 +30,17 @@ class websiteInformation extends Seeder
             'url' => 'https://scarboroughfolkfest.com',
         ];
 
-        
+
         foreach ($data as $key => $value) {
-            websiteInformationModel::updateOrCreate(
-                ['key' => $key],
-                ['value' => is_array($value) ? json_encode($value) : $value]
-            );
+            // check if the key already exists in the database
+
+            $exists = websiteInformationModel::where('key', $key)->exists();
+            if (!$exists) {
+                websiteInformationModel::updateOrCreate(
+                    ['key' => $key],
+                    ['value' => is_array($value) ? json_encode($value) : $value]
+                );
+            }
         }
-        
-        
     }
 }

@@ -44,8 +44,8 @@ class FileUpload
         $request = request();
         if ($request->hasFile($key)) {
 
-            if ($model->$attribute && Storage::disk('primary_public')->exists($path . '/' . $model->$attribute)) {
-                Storage::disk('primary_public')->delete($path . '/' . $model->$attribute);
+            if (($model->$attribute || $attribute['value']) && Storage::disk('primary_public')->exists($path . '/' . ($model->$attribute ?? $attribute['value']))) {
+                Storage::disk('primary_public')->delete($path . '/' . ($model->$attribute ?? $attribute['value']));
             }
 
             $file = $request->file($key);

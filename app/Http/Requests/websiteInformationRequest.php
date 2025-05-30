@@ -84,7 +84,12 @@ class websiteInformationRequest extends FormRequest
             // find the key from $data and update the value in the database
             foreach ($data as $key => $value) {
                 if (in_array($key, ['logo', 'thumbnail', 'favicon'])) {
-                    $value = FileUpload::update($key, new WebsiteInformationModel(), $key, 'website_information');
+
+
+                    // fetch existing record of logo, thumbnail, favicon
+                    $existingRecord = WebsiteInformationModel::where('key', $key)->first();
+                    
+                    $value = FileUpload::update($key, $existingRecord, 'value', 'website_information');
                 }
 
                 WebsiteInformationModel::updateOrCreate(
