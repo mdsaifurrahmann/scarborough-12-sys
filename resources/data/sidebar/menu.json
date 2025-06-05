@@ -24,6 +24,12 @@
 		"slug": "event.index"
 	},
 	{
+		"name": "Vision",
+		"icon": "american-football-outline",
+		"url": "vision-information",
+		"slug": "vision.index"
+	},
+	{
 		"name": "Users",
 		"icon": "people-outline",
 		"url": "users",

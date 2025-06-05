@@ -7,6 +7,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\WebsiteInformationController;
 use App\Http\Controllers\ContactInformationController;
 use App\Http\Controllers\EventDetailsController;
+use App\Http\Controllers\VisionController;
 
 Route::prefix('panel')->middleware('auth')->group(function () {
     Route::get('dashboard', [Dashboard::class, 'index'])->name('dashboard');
@@ -36,7 +37,10 @@ Route::prefix('panel')->middleware('auth')->group(function () {
 
         // Website Information
         Route::get('website-information', [WebsiteInformationController::class, 'index'])->name('info.index');
+        Route::get('vision-information', [VisionController::class, 'index'])->name('vision.index');
+
         Route::put('website-information/update', [WebsiteInformationController::class, 'update'])->name('info.update');
+        Route::put('vision-information/update', [VisionController::class, 'update'])->name('vision.update');
 
         // Contact Information
         Route::get('contact-information', [ContactInformationController::class, 'index'])->name('contact.index');

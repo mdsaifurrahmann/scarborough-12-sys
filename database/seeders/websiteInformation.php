@@ -28,6 +28,8 @@ class websiteInformation extends Seeder
                 "Community"
             ],
             'url' => 'https://scarboroughfolkfest.com',
+            'vision_desc' => "To create a world-class cultural festival that celebrates the rich diversity of Scarborough, fostering connections through music, art, and traditions from around the globe. Guided by Parampara Canada's mission to preserve and promote heritage, we aim to inspire unity, nurture creativity, and build a vibrant, inclusive community where all cultures are celebrated and shared.",
+            'vision_image' => 'vision_image.png',
         ];
 
 
