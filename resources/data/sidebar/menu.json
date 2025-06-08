@@ -1,61 +1,67 @@
 [
-	{
-		"name": "Dashboard",
-		"icon": "home-outline",
-		"url": "dashboard",
-		"slug": "dashboard"
-	},
-	{
-		"name": "Website Information",
-		"icon": "information-circle-outline",
-		"url": "website-information",
-		"slug": "info.index"
-	},
-	{
-		"name": "Contact Information",
-		"icon": "mail-open-outline",
-		"url": "contact-information",
-		"slug": "contact.index"
-	},
-	{
-		"name": "Event Details",
-		"icon": "bonfire-outline",
-		"url": "event-details",
-		"slug": "event.index"
-	},
-	{
-		"name": "Vision",
-		"icon": "american-football-outline",
-		"url": "vision-information",
-		"slug": "vision.index"
-	},
-	{
-		"name": "Users",
-		"icon": "people-outline",
-		"url": "users",
-		"slug": "users.index"
-	},
-	{
-		"name": "Role & Permissions",
-		"icon": "shield-half-outline",
-		"url": "",
-		"slug": "roles",
-		"submenu": [
-			{
-				"name": "Groups",
-				"url": "groups",
-				"slug": "groups.index"
-			},
-			{
-				"name": "Permissions",
-				"url": "permissions",
-				"slug": "permissions.index"
-			},
-			{
-				"name": "Roles",
-				"url": "roles",
-				"slug": "roles.index"
-			}
-		]
-	}
+  {
+    "name": "Dashboard",
+    "icon": "home-outline",
+    "url": "dashboard",
+    "slug": "dashboard"
+  },
+  {
+    "name": "Website Information",
+    "icon": "information-circle-outline",
+    "url": "website-information",
+    "slug": "info.index"
+  },
+  {
+    "name": "Contact Information",
+    "icon": "mail-open-outline",
+    "url": "contact-information",
+    "slug": "contact.index"
+  },
+  {
+    "name": "Event Details",
+    "icon": "bonfire-outline",
+    "url": "event-details",
+    "slug": "event.index"
+  },
+  {
+    "name": "Vision",
+    "icon": "american-football-outline",
+    "url": "vision-information",
+    "slug": "vision.index"
+  },
+  {
+    "name": "Join Us",
+    "icon": "git-merge-outline",
+    "url": "joinus-information",
+    "slug": "joinus.index"
+  },
+  {
+    "name": "Users",
+    "icon": "people-outline",
+    "url": "users",
+    "slug": "users.index"
+  },
+  {
+    "name": "Role & Permissions",
+    "icon": "shield-half-outline",
+    "url": "",
+    "slug": "roles",
+    "submenu": [
+      {
+        "name": "Groups",
+        "url": "groups",
+        "slug": "groups.index"
+      },
+      {
+        "name": "Permissions",
+        "url": "permissions",
+        "slug": "permissions.index"
+      },
+      {
+        "name": "Roles",
+        "url": "roles",
+        "slug": "roles.index"
+      }
+    ]
+  }
 ]

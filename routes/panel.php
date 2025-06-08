@@ -7,6 +7,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\WebsiteInformationController;
 use App\Http\Controllers\ContactInformationController;
 use App\Http\Controllers\EventDetailsController;
+use App\Http\Controllers\JoinUsController;
 use App\Http\Controllers\VisionController;
 
 Route::prefix('panel')->middleware('auth')->group(function () {
@@ -49,6 +50,10 @@ Route::prefix('panel')->middleware('auth')->group(function () {
         // Event Details
         Route::get('event-details', [EventDetailsController::class, 'index'])->name('event.index');
         Route::put('event-details/update', [EventDetailsController::class, 'update'])->name('event.update');
+        
+        // Join Us
+        Route::get('Joinus-information', [JoinUsController::class, 'index'])->name('joinus.index');
+        Route::put('joinus-information/update', [JoinUsController::class, 'update'])->name('joinus.update');
     });
 
 
